@@ -1,0 +1,12 @@
+<button type='button' {{on 'click' (perform this.findPokemons)}}>
+  Click me for all pokemons
+</button>
+<ul>
+  {{#if this.findPokemons.isRunning}}
+    <li>Loading...</li>
+  {{else}}
+    {{#each this.pokemons as |pokemon|}}
+      <li>{{pokemon.name}}</li>
+    {{/each}}
+  {{/if}}
+</ul>

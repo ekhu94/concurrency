@@ -1,0 +1,6 @@
+<div>
+  <h1>{{if this.findPokemon.isRunning 'Loading...' this.pokemon}}</h1>
+  <button type='button' {{on 'click' (perform this.findPokemon)}}>
+    Click Me!
+  </button>
+</div>
